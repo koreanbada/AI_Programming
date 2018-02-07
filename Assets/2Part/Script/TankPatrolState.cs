@@ -9,6 +9,8 @@ public class TankPatrolState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Debug.Log("We have entered the patrol state");
+        TankAi tankAi = animator.gameObject.GetComponent<TankAi>();
+        tankAi.SetNextPoint();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

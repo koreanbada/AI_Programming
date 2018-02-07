@@ -53,7 +53,7 @@ public class TankAi : MonoBehaviour {
                 animator.SetBool("isPlayerVisible", false);//공격하지 않는다.
             }
         } else {
-            animator.SetBool("isPlayerVisible", false);//6보다 멀때 플레이어를 공격하지 않는다. 
+            animator.SetBool("isPlayerVisible", false);//6보다 멀면 플레이어를 공격하지 않는다. 
         }
 
         //Lastly, we get the distance to the next waypoint target
