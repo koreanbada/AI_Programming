@@ -17,7 +17,7 @@ public class PlayerTank : MonoBehaviour
 	
 	void Update () 
     {
-        if (Vector3.Distance(transform.position, targetTransform.position) < 2.5f)//사거리를 5로 잡음
+        if (Vector3.Distance(transform.position, targetTransform.position) < 5f)//사거리를 5로 잡음
         {
             return;
         }

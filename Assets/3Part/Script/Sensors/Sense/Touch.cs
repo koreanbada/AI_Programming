@@ -5,7 +5,7 @@ public class Touch : Sense
 {
     void OnTriggerEnter(Collider other)
     {
-        Aspect aspect = other.GetComponent<Aspect>();
+        Aspect aspect = other.GetComponent<Aspect>();//Perspective.cs ¿Í °°´Ù. 
         if (aspect != null)
         {
             //Check the aspect

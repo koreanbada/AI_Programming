@@ -23,12 +23,13 @@ public class Wander : MonoBehaviour
 	
 	void Update () 
     {//목적 지점 근처인지 검사
-        if(Vector3.Distance(tarPos, transform.position) <= 5.0f)
+        if(Vector3.Distance(tarPos, transform.position) <= 5.0f)//
             GetNextPosition();
         
         //목적지 방향으로의 회전을 위한 쿼터니온 설정
         Quaternion tarRot = Quaternion.LookRotation(tarPos - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, tarRot, rotSpeed * Time.deltaTime);
+        //Slerp 방향 돌릴때 사용함.
         
         //회전과 트랜스레이션 갱신
         transform.Translate(new Vector3(0, 0, movementSpeed * Time.deltaTime));
@@ -36,6 +37,6 @@ public class Wander : MonoBehaviour
 
     void GetNextPosition()
     {
-        tarPos = new Vector3(Random.Range(minX, maxX), 0.5f, Random.Range(minZ, maxZ));
+        tarPos = new Vector3(Random.Range(minX, maxX), 0.5f, Random.Range(minZ, maxZ));//-45에서 45만큼 이동한다. 
     }
 }
