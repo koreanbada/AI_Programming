@@ -12,7 +12,7 @@ public class PlayerTank : MonoBehaviour
     {
         movementSpeed = 10.0f;
         rotSpeed = 2.0f;
-        targetTransform = GameObject.Find("Target").transform;
+        targetTransform = GameObject.Find("Targett").transform;
 	}
 	
 	void Update () 

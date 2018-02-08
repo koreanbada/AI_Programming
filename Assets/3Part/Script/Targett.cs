@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class Targett : MonoBehaviour
 {
     public Transform targetMarker;
 
