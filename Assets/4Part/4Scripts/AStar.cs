@@ -43,7 +43,7 @@ public class AStar {
             GridManager.instance.GetNeighbours(node, neighbours);// GridManager는 싱글톤, neighbours는 ArrayList.
 
 
-            //-----------------for 반복문-------------------
+            //-----------------for 반복문 시작 -------------------//길 찾을때까지 계속 돌린다. 비용이 제일 적은 것으로 한다. While의 For문으로 돌려준다. 
             for (int i = 0; i < neighbours.Count; i++)//for 반복문
             {
                 Node neighbourNode = (Node)neighbours[i];//첫번은 0번째.
@@ -64,7 +64,7 @@ public class AStar {
                     }
                 }
             }
-            //------------------for 반복문------------------
+            //------------------for 반복문 끝------------------
 
             //현재 노드를 closedList에 추가한다. 
             closedList.Push(node);
