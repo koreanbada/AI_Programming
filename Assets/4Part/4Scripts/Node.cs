@@ -34,12 +34,15 @@ public class Node : IComparable {
     }
 
     public int CompareTo (object obj)
-    {
+    {   
         Node node = (Node) obj;
+
+        //음수 값은 오브젝트가 정렬된 상태에서 현재보다 앞에 있음을 의미한다. 
         if (this.estimatedCost < node.estimatedCost)
         {
             return -1;
         }
+        //양수 값은 오브젝트가 정렬된 상태에서 현재보다 뒤에 있음을 의미한다. 
         if (this.estimatedCost > node.estimatedCost)
         {
             return 1;
